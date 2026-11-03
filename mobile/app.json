@@ -1,13 +1,17 @@
 {
   "expo": {
     "name": "Heaven Gate Services",
-    "slug": "carepath-services",
-    "scheme": "carepath",
+    "slug": "heaven-gate-services",
+    "scheme": "heavengate",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "plugins": ["expo-router"],
-    "android": { "package": "com.example.carepathservices" }
+    "plugins": [
+      "expo-router",
+      "expo-secure-store"
+    ],
+    "android": {
+      "package": "com.example.carepathservices"
+    }
   }
 }
