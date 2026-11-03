@@ -6,6 +6,8 @@ import helmet from 'helmet';
 
 import adminRoutes from './routes/adminRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import otpRoutes from './routes/otpRoutes.js';
+import memberRoutes from './routes/memberRoutes.js';
 const app = express();
 const port = Number(process.env.PORT || 4000);
 
@@ -40,6 +42,8 @@ app.get('/api/health/db', async (req, res) => {
 
 app.use('/api/admin', adminRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/auth/otp', otpRoutes);
+app.use('/api/member', memberRoutes);
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', service: 'funeral-services-api', timestamp: new Date().toISOString() });
 });
